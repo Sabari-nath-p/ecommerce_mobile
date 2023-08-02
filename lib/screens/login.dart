@@ -1,5 +1,6 @@
 import 'package:e_commerce_mobile/screens/forgotPass.dart';
 import 'package:e_commerce_mobile/screens/register.dart';
+import 'package:e_commerce_mobile/styles.dart/colors.dart';
 import 'package:e_commerce_mobile/styles.dart/sizer.dart';
 import 'package:e_commerce_mobile/styles.dart/textstyle.dart';
 import 'package:flutter/material.dart';
@@ -73,20 +74,20 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: Colors.redAccent),
-                      child: tx400("Login"),
+                      child: tx600("Login", color: Colors.white, size: 18),
                     ),
                     height(10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        tx500("Don't have an account?"),
+                        tx500("Don't have an account ?"),
                         InkWell(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => SignupScreen()));
                             },
-                            child: tx500("Sign up"))
+                            child: tx500("Sign up", color: primaryColor))
                       ],
                     )
                   ],
