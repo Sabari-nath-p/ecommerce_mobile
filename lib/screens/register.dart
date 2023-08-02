@@ -15,7 +15,13 @@ class _SignupScreenState extends State<SignupScreen> {
         body: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              InkWell(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Icon(Icons.arrow_back_ios_new)),
               SizedBox(height: 50),
               Align(
                 alignment: Alignment.centerLeft,

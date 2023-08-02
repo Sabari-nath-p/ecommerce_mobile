@@ -1,3 +1,4 @@
+import 'package:e_commerce_mobile/screens/forgotPass.dart';
 import 'package:e_commerce_mobile/screens/register.dart';
 import 'package:e_commerce_mobile/styles.dart/sizer.dart';
 import 'package:e_commerce_mobile/styles.dart/textstyle.dart';
@@ -53,12 +54,18 @@ class _LoginScreenState extends State<LoginScreen> {
                           labelText: ("Password"),
                           border: OutlineInputBorder()),
                     ),
-                    Align(
-                        alignment: Alignment.centerRight,
-                        child: Padding(
-                          padding: EdgeInsets.only(right: 1.0),
-                          child: tx500("Forgot password?"),
-                        )),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => forgotPasswordScreen()));
+                      },
+                      child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Padding(
+                            padding: EdgeInsets.only(right: 1.0),
+                            child: tx500("Forgot password?"),
+                          )),
+                    ),
                     height(15),
                     Container(
                       height: 45,
