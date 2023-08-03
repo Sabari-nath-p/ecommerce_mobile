@@ -87,6 +87,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(left: 3),
                       labelText: ("Password"),
+                       suffixIcon: Icon(Icons.visibility),
                       border: OutlineInputBorder(
                         borderSide: BorderSide(width: 4),
                       )),
